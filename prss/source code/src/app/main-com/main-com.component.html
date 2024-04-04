@@ -1,0 +1,100 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10 text-center">
+             <button [hidden]="start_but" class="btn btn-success main_btn"  (click)="start_game()">start game</button>
+        <div [hidden]="!start_but"> <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <div class="row">
+                        <div class="col-12 bg-info mt-3 rounded hum1">HUMAN</div>
+                    </div>
+
+                    <button (click)="paper()" class="btn btn-primary human">Paper</button>
+                    <button (click)="rock()"class="btn btn-primary human">Rock</button>
+                    <button (click)="scissor()"class="btn btn-primary human">Scissor</button>
+                  
+                  </div>
+
+
+<!-- main -->
+                 <div class="col-6 main_box text-center" >
+                    <h1>Main container</h1>
+
+                        <div class="row">
+                            <div class="col-6 game_vid">human
+                                <img [src]="l_img_url" height="150px">  
+                            </div>
+                            <div class="col-6 game_vid">machine
+                                <img [src]="r_img_url" height="150px">
+                            </div>            
+                        </div>
+
+            <!--Matchh no row-->
+                        <div class="row">
+                             <div class="col-12"><h2>Match Number:<span style="color: #e0218a;">{{t_match}}</span></h2></div>
+                            
+                        </div>
+            
+                        <div class="row">
+                             <div class="col-6">
+                                <h2>Human</h2>
+                                <hr style="border: solid 2px;">
+                                <h4>win:
+                                <span style="color:#e0218a;
+                                         font-weight: 700;
+                                         background-color: pink;
+                                ">{{h_win}} score  </span> </h4>
+                                <h4>draw:
+                                    <span style="color:#e0218a;
+                                    font-weight: 700;
+                                    background-color: pink;
+
+                                    ">{{h_draw}} score </span> </h4>
+                                <h4>loss:
+                                    <span style="color:#e0218a;
+                                    font-weight: 700;
+                                    background-color: pink;
+                                ">{{h_lost}} score </span> </h4>
+                             </div>
+                             <div class="col-6">
+                                <h2>Machine</h2>
+                                <hr style="border: solid 2px;">
+                                <h4>win:
+                                <span style="color:#e0218a;
+                                         font-weight: 700;
+                                         background-color: pink;
+                               ">{{m_win}} score  </span> </h4>
+
+                                <h4>draw:
+                                    <span style="color:#e0218a;
+                                         font-weight: 700;
+                                         background-color: pink;
+                                 ">{{m_draw}} score </span> </h4>
+                                <h4>loss:
+                                    <span style="color:#e0218a;
+                                       font-weight: 700;
+                                       background-color: pink;
+                                    ">{{m_lost}} score </span> </h4>
+                             </div>
+                        </div>
+                   </div>
+                   <div class="col-md-3">
+                      <div class="row">
+                        <div class="col-12 bg-info  hum1">MACHINE</div>
+                    </div>
+
+
+                    <button class="btn btn-primary human">Paper</button>
+                    <button class="btn btn-primary human">Rock</button>
+                    <button class="btn btn-primary human">Scissor</button>
+              
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="col-md-1"></div>
+</div>
+</div>
